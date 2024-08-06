@@ -1,0 +1,34 @@
+<form (ngSubmit)="submitPost()" class="post-form">
+  <div class="form-group">
+    <label for="titulo">Título</label>
+    <input id="titulo" [(ngModel)]="post.titulo" name="titulo" required class="form-input">
+  </div>
+
+  <div class="form-group">
+    <label for="texto">Texto</label>
+    <textarea id="texto" [(ngModel)]="post.texto" name="texto" required class="form-textarea"></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="autor">Autor</label>
+    <input id="autor" [(ngModel)]="post.autor" name="autor" required class="form-input">
+  </div>
+
+  <div class="form-group">
+    <label for="srcImagen">URL de la imagen</label>
+    <input id="srcImagen" [(ngModel)]="post.srcImagen" name="imagen" class="form-input">
+  </div>
+
+  <div class="form-group">
+    <label for="fecha">Fecha</label>
+    <input id="fecha" [(ngModel)]="post.fecha" name="fecha" type="date" required class="form-input">
+  </div>
+
+  <div class="form-group">
+    <label for="cat">Categoría</label>
+    <input id="cat" [(ngModel)]="post.cat" name="cat" required class="form-input">
+  </div>
+  <div id="boton">
+    <button type="submit" class="form-but">Enviar</button>
+  </div>
+</form>

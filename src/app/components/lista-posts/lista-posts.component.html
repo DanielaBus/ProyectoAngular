@@ -1,0 +1,15 @@
+<div class="b-container">
+  <button (click)="filterByCategoria('Romantic')">Romantic</button>
+  <button (click)="filterByCategoria('Comedy')">Comedy</button>
+  <button (click)="filterByCategoria('')">All categories</button>
+  <button (click)="navigateToNewPost()">New Post +</button>
+</div>
+
+<div *ngFor="let post of posts" class="post-card">
+  <h2 class="post-title">{{ post.titulo }}</h2>
+  <p class="post-text">{{ post.texto }}</p>
+  <p class="post-author"><strong>Autor:</strong> {{ post.autor }}</p>
+  <img *ngIf="post.srcImagen" [src]="post.srcImagen" alt="{{ post.titulo }}" class="post-image">
+  <p class="post-date"><strong>Fecha:</strong> {{ post.fecha | date }}</p>
+  <p class="post-category"><strong>Categoría:</strong> {{ post.cat }}</p>
+</div>
